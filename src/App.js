@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from './assets/img/logo.png';
+import user from './assets/img/user.png'
+import './assets/css/style.css';
+import { useState } from 'react';
 
 function App() {
+  const [ active, setMode] = useState(false);
+  const ToggleMode = () => {
+    setMode(!active)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="navbar">
+        <img src={logo} alt="Logomarga QRideia2001"/>
+        <div className="links">
+          <a href="url">Home</a>
+          <a href="url">Eventos</a>
+          <a href="url">Usuários</a>
+          <a href="url">Relatórios</a>
+        </div>
+        <div className="user">
+          <img src={user} alt="Sua foto aqui"/>
+          <div className="username">
+          <a href="url">Igor D'Amico Sotolani</a>
+          <a href="url">Desconectar</a>
+          </div>          
+
+        </div>
+      </div>
+      <div className="bodyitens">
+
+      </div>
     </div>
   );
 }
